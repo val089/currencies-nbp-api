@@ -7,9 +7,10 @@ const FETCH_CURRENCIES_FAILED = 'FETCH_CURRENCIES_FAILED';
 export const fetchCurrencies = () => {
   return (dispatch) => {
     dispatch(fetchRequested());
-      axios.get('http://api.nbp.pl/api/exchangerates/tables/a/last/')
-      .then(({ data }) => {
-        dispatch(fetchSucceeded(data));
+      axios.get('https://api.nbp.pl/api/exchangerates/tables/a/last/')
+      .then(({data}) => {
+        dispatch(fetchSucceeded(data[0].rates));
+        console.log(data[0].rates);
       })
         .catch(error => {
           dispatch(fetchFailed(error));
@@ -37,7 +38,7 @@ const INITIAL_STATE = {
   isError: false
 };
 
-export default (state = INITIAL_STATE, action) => {
+const currenciesReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
       case FETCH_CURRENCIES_REQUESTED:
         return {
@@ -50,7 +51,7 @@ export default (state = INITIAL_STATE, action) => {
           ...state,
           isLoading: false,
           isError: false,
-          books: action.payload
+          currencies: action.payload
         };
       case FETCH_CURRENCIES_FAILED:
         return {
@@ -62,3 +63,5 @@ export default (state = INITIAL_STATE, action) => {
         return state;
     }
   };
+
+export default currenciesReducer;

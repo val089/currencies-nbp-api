@@ -8,3 +8,11 @@
         @error '"#{$breakpoint}" - Size not found';
     }
 }
+
+@mixin  wrapper {
+    max-width: 136.6rem;
+}
+
+@mixin  table-wrapper {
+    max-width: 100rem;
+}

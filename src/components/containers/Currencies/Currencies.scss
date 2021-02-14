@@ -1,0 +1,11 @@
+@import 'colors.scss';
+@import 'mixins.scss';
+@import 'breakpoints.scss';
+
+.currencies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12rem auto;
+    @include table-wrapper;
+}
