@@ -4,8 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-
 import Header from './components/Header';
+import Currencies from './components/containers/Currencies';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact>
-          {/* <Currencies /> */}
+          <Currencies />
         </Route>
         <Route path="/basket">
           {/* <Favourites /> */}
