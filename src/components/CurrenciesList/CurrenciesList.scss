@@ -48,8 +48,17 @@
             padding: 2rem;
         }
 
-        // &:nth-last-child(1) {
-        //     background: $body-bg-color;
-        // }
+        &--flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        &--modal {
+            width: 0;
+            background: 0;
+            color: #000;
+            padding: 0;
+        }
     }
 }
