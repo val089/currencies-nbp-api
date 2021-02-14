@@ -1,0 +1,13 @@
+@import 'colors.scss';
+
+.button {
+    font-size: 2rem;
+    color: $add-to-favorites-btn;
+    outline: none;
+    transition: .4s;
+
+    &:hover {
+       color: red;
+       transform: scale(1.3);
+    }
+}

@@ -10,4 +10,8 @@ const Logo = ({ image, text }) => {
     );
 };
 
+Logo.defaultProps = {
+    text: 'Logo'
+};
+
 export default Logo;
