@@ -12,10 +12,10 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route path="/home" exact>
+        <Route path="/currencies-nbp-api" exact>
           <Currencies />
         </Route>
-        <Route path="/favourites">
+        <Route path="/currencies-nbp-api/favourites">
           <Favourites />
         </Route>
       </Switch>
