@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route path="/" exact>
+        <Route path="/home" exact>
           <Currencies />
         </Route>
         <Route path="/favourites">
