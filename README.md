@@ -2,6 +2,9 @@
 
 Simple web user interface which connects with NBP web API (https://api.nbp.pl/).
 
+![currencies](https://user-images.githubusercontent.com/30775271/108040721-f45d4000-703d-11eb-8eea-aad068d107e8.png)
+
+
 ## Project setup
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
