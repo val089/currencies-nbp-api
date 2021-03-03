@@ -1,9 +1,12 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import Favourite from './Favourite';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
-it('renders ok', () => {
-	const tree = renderer.create(<Favourite icon={faTrashAlt} />).toJSON();
-	expect(tree).toMatchSnapshot();
+describe('Button component in Favourite component', () => {
+	it('should Button icon to be faTrashAlt in Favourite component', () => {
+		const wrapper = mount(<Favourite />);
+		const button = wrapper.find('button');
+		expect(button.props().icon).to.equal(faTrashAlt);
+	});
 });
