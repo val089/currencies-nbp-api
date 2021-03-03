@@ -12,12 +12,8 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route path="/currencies-nbp-api" exact>
-          <Currencies />
-        </Route>
-        <Route path="/currencies-nbp-api/favourites">
-          <Favourites />
-        </Route>
+        <Route path="/currencies-nbp-api" component={Currencies} exact />
+        <Route path="/currencies-nbp-api/favourites" component={Favourites} />
       </Switch>
     </Router>
   );
