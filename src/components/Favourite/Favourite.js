@@ -19,7 +19,11 @@ const Favourite = ({ data, removeFromFavourites }) => {
 			<td className="table__td">{data.currency}</td>
 			<td className="table__td table__td--flex">
 				{data.mid}
-				<Button icon={faTrashAlt} onClick={openModal} />
+				<Button
+					icon={faTrashAlt}
+					onClick={openModal}
+					className="button"
+				/>
 			</td>
 			<td className="table__td--modal">
 				<Modal
@@ -39,10 +43,11 @@ const mapDispatchToProps = {
 
 Favourite.propTypes = {
 	data: PropTypes.shape({
-		code: PropTypes.string.isRequired,
-		currency: PropTypes.string.isRequired,
-		mid: PropTypes.number.isRequired,
+		code: PropTypes.string,
+		currency: PropTypes.string,
+		mid: PropTypes.number,
 	}),
 };
 
+export { Favourite };
 export default connect(null, mapDispatchToProps)(Favourite);
