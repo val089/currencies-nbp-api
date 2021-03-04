@@ -10,7 +10,11 @@ const Currency = ({ data, onClick }) => {
 			<td className="table__td">{data.currency}</td>
 			<td className="table__td table__td--flex">
 				{data.mid}
-				<Button icon={faHeart} onClick={() => onClick(data.code)} />
+				<Button
+					icon={faHeart}
+					onClick={() => onClick(data.code)}
+					className="button"
+				/>
 			</td>
 		</tr>
 	);
@@ -18,9 +22,9 @@ const Currency = ({ data, onClick }) => {
 
 Currency.propTypes = {
 	data: PropTypes.shape({
-		code: PropTypes.string.isRequired,
-		currency: PropTypes.string.isRequired,
-		mid: PropTypes.number.isRequired,
+		code: PropTypes.string,
+		currency: PropTypes.string,
+		mid: PropTypes.number,
 	}),
 };
 
